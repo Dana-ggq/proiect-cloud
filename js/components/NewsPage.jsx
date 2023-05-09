@@ -6,6 +6,8 @@ const News = () => {
   const router = useRouter();
   const { city } = router.query;
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -19,19 +21,16 @@ const News = () => {
           apiKey: `a89076cafbf2435999229afd7083b859`
 
         }
-       // const response = await fetch(`https://newsapi.org/v2/everything?q=${city}&apiKey=a89076cafbf2435999229afd7083b859`);
-       // const data = await response.json();
         const queryString = new URLSearchParams(params).toString();
         const response = await fetch(`${url}?${queryString}`, { headers });
         const data = await response.json();
-
-
         setArticles(data.articles);
+        setLoading(false)
       } catch (error) {
         console.error(error);
+        setLoading(false)
       }
     };
-
     if (city) {
         console.log(city)
       fetchNews();
@@ -52,6 +51,9 @@ const News = () => {
 
         <br/>
 
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
         <div className="w-full mx-auto bg-gray-100 shadow-lg rounded-lg p-6">
           {articles.length > 0 ? (
             <div className="grid grid-cols-2 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-1 md:grid-cols-2">
@@ -88,6 +90,7 @@ const News = () => {
             </div>
           )}
         </div>
+        )}
       </div>
     </section>
   );
