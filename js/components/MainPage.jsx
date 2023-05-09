@@ -48,12 +48,7 @@ export default function MainPage() {
 				<CityDropdown setSelectedCity={setSelectedCity} />
 
 				<br/>
-				<Link href={`/news?city=${selectedCity.value}`} passHref>
-				<div className="px-6 py-2 mx-auto rounded-md text-lg font-medium text-white bg-gray-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-center">
-						See news from the selected city
-					</div>
-				</Link>
-
+			
 				{records.length > 0 ? (
 					<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 						{records.map((record, index) => (
