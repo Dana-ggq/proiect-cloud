@@ -10,9 +10,22 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        console.log(process.env.NEWS_API, process.env.NEXT_ATLAS_URI)
-        const response = await fetch(`https://newsapi.org/v2/everything?q=${city}&apiKey=a89076cafbf2435999229afd7083b859`);
+        const url = `https://newsapi.org/v2/everything`
+        const headers = {
+          Authorization: `Bearer a89076cafbf2435999229afd7083b859`,
+        }
+        const params = {
+          q: `${city}`,
+          apiKey: `a89076cafbf2435999229afd7083b859`
+
+        }
+       // const response = await fetch(`https://newsapi.org/v2/everything?q=${city}&apiKey=a89076cafbf2435999229afd7083b859`);
+       // const data = await response.json();
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${url}?${queryString}`, { headers });
         const data = await response.json();
+
+
         setArticles(data.articles);
       } catch (error) {
         console.error(error);
