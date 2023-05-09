@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const News = () => {
   const router = useRouter();
@@ -9,6 +10,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
+        console.log(process.env.NEWS_API, process.env.NEXT_ATLAS_URI)
         const response = await fetch(`https://newsapi.org/v2/everything?q=${city}&apiKey=a89076cafbf2435999229afd7083b859`);
         const data = await response.json();
         setArticles(data.articles);
@@ -29,6 +31,14 @@ const News = () => {
         <h1 className="w-[500px] mx-auto text-center text-6xl font-bold">News from {city}</h1>
         <br/>
   
+        <Link href="/" passHref>
+				<div className="px-2 py-2 mx-auto max-w-md rounded-md text-lg font-medium text-gray bg-white-400 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-center">
+						Go back to main page
+					</div>
+				</Link>
+
+        <br/>
+
         <div className="w-full mx-auto bg-gray-100 shadow-lg rounded-lg p-6">
           {articles.length > 0 ? (
             <div className="grid grid-cols-2 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-1 md:grid-cols-2">
