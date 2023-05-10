@@ -11,7 +11,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url = `http://eventregistry.org/api/v1/article/getArticles`
+        const url = `https://eventregistry.org/api/v1/article/getArticles`
         const params = {
           keyword: `${city}`,
           lang: `eng`,
