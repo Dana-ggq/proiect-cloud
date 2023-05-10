@@ -33,6 +33,7 @@ export default function MainPage() {
 				<h1 className="w-[500px] mx-auto text-center text-6xl font-bold">Your Travel Buddy</h1>
 				<p className="w-[1000px] mx-auto text-center mt-4 text-3xl font-normal">Recommendations from Your Fellow Travelers</p>
 
+				<br/>
 
 				<br/>
 				<Link href="/insert" passHref>
@@ -48,6 +49,13 @@ export default function MainPage() {
 				<CityDropdown setSelectedCity={setSelectedCity} />
 
 				<br/>
+				<Link href = {`/news?city=${selectedCity.value}`} passHref>
+				<div className="px-6 py-2 mx-auto rounded-md text-lg font-medium text-white bg-gray-300 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-center">
+				 see news concerning the selected city				
+				</div>
+				</Link>
+
+				
 			
 				{records.length > 0 ? (
 					<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
