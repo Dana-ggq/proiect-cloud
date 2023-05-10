@@ -19,7 +19,7 @@ const News = () => {
         }
         const queryString = new URLSearchParams(params).toString();
         //const response = await fetch(`${url}?${queryString}`);
-        const response = await fetch(`http://eventregistry.org/api/v1/article/getArticles?apiKey=874c358c-8d62-45ad-ac05-1dc272e5539e&keyword=${city}&lang=eng`);
+        const response = await fetch(`https://eventregistry.org/api/v1/article/getArticles?apiKey=874c358c-8d62-45ad-ac05-1dc272e5539e&keyword=${city}&lang=eng`);
         const data = await response.json();
         
         //console.log('articles')
