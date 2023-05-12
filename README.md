@@ -38,24 +38,24 @@ Link videoclip de prezentare: https://youtu.be/dsUDs5uNKZE
 
 
 # 1\. Introducere. 
-`	`Este bine cunoscut că Internetul și în prezent soluțiile cloud au o influență puternică asupra vieții de zi cu zi a oamenilor fiind aproape indispensabile pentru o bună parte din societate. Ele alterează modul în care oamenii interacționează cu alți oameni, dar și cu diferite produse și/sau servicii. 
+Este bine cunoscut că Internetul și în prezent soluțiile cloud au o influență puternică asupra vieții de zi cu zi a oamenilor fiind aproape indispensabile pentru o bună parte din societate. Ele alterează modul în care oamenii interacționează cu alți oameni, dar și cu diferite produse și/sau servicii. 
 
 Una dintre cele mai plăcute activități, devenită hobby pentru mulți este călătoritul.  Globalizarea și digitalizarea au revoluționat domeniul turismului, de la banalul GPS la posibilitatea rezervării unui întreg concediu printr-un singur click. Totodată realizarea itinerariului pentru viitoarea vacanță a devenit un complet proces de căutări prin recomandări și bloguri de călătorie. Aceste site-uri și aplicații de recomandări sunt o resursă excelentă pentru călători, acesția fiind astfel pregătiți să ia cele mai bune alegeri în timpul călătoriei.
 # 2\. Descrierea problemei
-`	`Aplicația proiectată este dedicată călătorilor. Acestia pot citi recomandări de la alte persoane pasionate de călătorit pentru viitoarele lor aventuri. 
+Aplicația proiectată este dedicată călătorilor. Acestia pot citi recomandări de la alte persoane pasionate de călătorit pentru viitoarele lor aventuri. 
 
-`	`Utilizatorii pot urmări recomandări din toată lumea sau dintr-un oraș specific unde urmează să călătorească. Oricine își poate posta recomandările de vacanță prin intermediul formularului de adăugare. Pentru a ajuta călătorii, există posibilitatea de a urmări știri care ar putea fi de interes în legătură cu orașul ce urmează să fie vizitat. 
+Utilizatorii pot urmări recomandări din toată lumea sau dintr-un oraș specific unde urmează să călătorească. Oricine își poate posta recomandările de vacanță prin intermediul formularului de adăugare. Pentru a ajuta călătorii, există posibilitatea de a urmări știri care ar putea fi de interes în legătură cu orașul ce urmează să fie vizitat. 
 
-`	`Pentru afișarea știrilor s-a utilizat un serviciu cloud, mai precis un API specializat (newsapi.ai) care permite preluarea și filtrarea știrilor din întreaga lume. De asemenea s-a utilizat un API (Countries & Cities API) pentru preluarea tuturor orașelor din lume în vederea populării unui drop down din interfața utilizator pentru a ușurarea cătuărilor și introducerii de date.
+Pentru afișarea știrilor s-a utilizat un serviciu cloud, mai precis un API specializat (newsapi.ai) care permite preluarea și filtrarea știrilor din întreaga lume. De asemenea s-a utilizat un API (Countries & Cities API) pentru preluarea tuturor orașelor din lume în vederea populării unui drop down din interfața utilizator pentru a ușurarea cătuărilor și introducerii de date.
 
-`	`În implementarea aplicației s-au utilizat tehnologiile Next.js și Node.js și s-a realizat legătura cu o bază de date în cloud MongoDB. De asemenea aplicația a fost publicată pe platforma cloud de hosting Vercel.
+În implementarea aplicației s-au utilizat tehnologiile Next.js și Node.js și s-a realizat legătura cu o bază de date în cloud MongoDB. De asemenea aplicația a fost publicată pe platforma cloud de hosting Vercel.
 # 3\. Descriere API 
-`	`Pentru realizara unor funcționalități s-au utilizat 2 API-uri externe apelate în front-end pentru a prelua datele dorite.
+Pentru realizara unor funcționalități s-au utilizat 2 API-uri externe apelate în front-end pentru a prelua datele dorite.
 
 Countries & Cities API: 
 
 Este un API gratuit de unde se pot prelua numeroase informații despre țări și orașe din lume cum ar fi populația, locația, steaguri, monede, capital. S-a folosit acest API pentru a prelua toate orașele din lume pentru a popula un control de tip dropdown care lucrează asincron, controlul AsyncSelect din React. Pentru utilizarea nu este necesară o cheie ci doar realizara unei cereri către endpoint-ul dorit. În cazul aplicației se dorește preluarea tuturor orașelor din lume acest lucru se face realizând o cerere GET la end pointul countries. Răspunsul primit de la API conține o listă de țări fiecare având o listă cu orașe.
-
+image.png
 *Figure 1 Utilizare API Countries & Cities pentru preluare orase*
 
 *Figure 2 Răspuns GET API*
