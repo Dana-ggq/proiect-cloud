@@ -17,7 +17,7 @@ export default function CityDropdown({ setSelectedCity }) {
       const allOption = { value: "All over the world", label: "All over the world" };
 
       //callback([allOption, ...options.filter((option) => option.label.includes(inputValue))]);
-      callback([allOption, ...options.filter((option) => option.label.toLowerCase().startsWith(inputValue))]);
+      callback([allOption, ...options.filter((option) => option.label.toLowerCase().startsWith(inputValue.toLowerCase()))]);
 
 
     } catch (error) {
