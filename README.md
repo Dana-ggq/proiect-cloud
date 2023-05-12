@@ -56,39 +56,47 @@ Countries & Cities API:
 
 Este un API gratuit de unde se pot prelua numeroase informații despre țări și orașe din lume cum ar fi populația, locația, steaguri, monede, capital. S-a folosit acest API pentru a prelua toate orașele din lume pentru a popula un control de tip dropdown care lucrează asincron, controlul AsyncSelect din React. Pentru utilizarea nu este necesară o cheie ci doar realizara unei cereri către endpoint-ul dorit. În cazul aplicației se dorește preluarea tuturor orașelor din lume acest lucru se face realizând o cerere GET la end pointul countries. Răspunsul primit de la API conține o listă de țări fiecare având o listă cu orașe.
 image.png
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/304d3846-5131-4f7d-9e01-9263708d1bc5)
 *Figure 1 Utilizare API Countries & Cities pentru preluare orase*
-
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/f83127d4-0bc3-449e-bac1-41eb3341217c)
 *Figure 2 Răspuns GET API*
 
 News API:
 
 NewsAPI.ai oferă 2000 de tokenuri gratuite pentru userii care nu plătesc un abonament. Pentru a avea acces nelimitat la toate funcționalitățile este necesara plății unei sume lunare. Pentru a trimite cereri către API este necesară o cheie care se primește la crearea unui cont pe platformă. Există numeroase endpointuri, se pot prelua și filtra articole din toată lumea. 
 
-`	`În aplicație s-a utilizat endpoint-ul getArticles pentru a prelua și posta știri. Pentru filtrări s-au utilizat parametrii: keyword care v-a primi numele orașului de interes și lang care primește valoarea eng pentru a afișa doar știrile în limba engleză. 
+În aplicație s-a utilizat endpoint-ul getArticles pentru a prelua și posta știri. Pentru filtrări s-au utilizat parametrii: keyword care v-a primi numele orașului de interes și lang care primește valoarea eng pentru a afișa doar știrile în limba engleză. 
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/5303765b-ca7c-4b73-9beb-383b0e726faf)
 
 *Figure 3 Exemplu răspuns cerere GET*
 
 REST API pentru conectarea cu baza de date:
 
-`	`Pentru a realiza operații CRUD pe baza de date remote MongoDB s-au implementat o serie de metode. Operațiile necesare sunt selectarea tuturor recomandărilor, selectarea recomandărilor dintr-un oraș specific primit ca parametru și introducerea de noi recomandări. 
+Pentru a realiza operații CRUD pe baza de date remote MongoDB s-au implementat o serie de metode. Operațiile necesare sunt selectarea tuturor recomandărilor, selectarea recomandărilor dintr-un oraș specific primit ca parametru și introducerea de noi recomandări. 
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/bd1b2902-dfc2-41f3-9382-78002e7e07ad)
 
 *Figure 4 Metode de selecție GET*
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/90897ac9-2fe8-42f5-95b0-fb8ab692d748)
 
 *Figure 5 Metodă adăugare recomandare POST*
 # 4\. Flux de date (0,25p)
 Exemple de request/response:
 
 - GET: <http://localhost:3000/api/records>
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/f833ed50-58ce-4f7b-b4e7-e43435a0729e)
 
 *Figure 6 Răspuns cerere GET pentru toate recomandările*
 
 - GET: <http://localhost:3000/api/records?city=Tokyo>
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/d4ba6f00-e059-46d9-8004-390f87a4c314)
 
 *Figure 7 Răspuns GET recomandări dintr-un oraș specific*
 
 - POST : http://localhost:3000/api/records
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/f97a5acd-81a1-421f-830d-d3994d8c0282)
 
 *Figure 8 Corp cerere POST*
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/af6b5c13-1486-4807-a23e-15df25323f5e)
 
 *Figure 9 Răspuns POST*
 
@@ -114,17 +122,23 @@ Autentificare și autorizare servicii utilizate:
 # 5\. Capturi ecran aplicație
 Pagina principală aplicație:
 
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/3f17c6c2-83bb-4372-bc6e-eb8b7abeff0a)
 
 Drop down de tip AsyncSelect care preia toate orașele din lume de pe API și oferă sugestii pe măsură ce utilizatorul completează denumirea orașului căutat:
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/5e460e82-781b-44ff-9dc2-92ca237f2e1d)
 
-`	`Recomandări filtrate după orașul căutat.
+Recomandări filtrate după orașul căutat.
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/60af9f96-129e-4773-befa-f58d56395012)
 
 
 Formular adăugare recomandare:
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/dbe58a80-2952-4cb1-9e06-32384be1c956)
 
 Avertizări formular incomplet:
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/6df8dc4f-17c9-4982-8120-3944c9f58660)
 
 Pagina care afișează știrile preluate de pe API care conțin în corp denumirea orașului căutat:
+![image](https://github.com/Dana-ggq/proiect-cloud/assets/74836238/549a144a-7eef-4472-a6f2-6223293dbb65)
 
 
 6\. Referințe
